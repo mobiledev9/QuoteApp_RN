@@ -1,0 +1,201 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Aclonica-Regular.ttf",
+      "sha1": "1f921472192f2e4f0c351e9e8536538280173644"
+    },
+    {
+      "path": "src/assets/fonts/Arimo[wght].ttf",
+      "sha1": "85d9374d882bd470f63fe65c912220bdfb42343b"
+    },
+    {
+      "path": "src/assets/fonts/Calligraffitti-Regular.ttf",
+      "sha1": "881f83af948369df965c9a48c643aeaee587a595"
+    },
+    {
+      "path": "src/assets/fonts/CherryCreamSoda-Regular.ttf",
+      "sha1": "49f8fc68112ef4dd882d8709c747d1fcd98d6f1e"
+    },
+    {
+      "path": "src/assets/fonts/Chewy-Regular.ttf",
+      "sha1": "c7c528f50a1fa31b5518ee52994615333fd40c83"
+    },
+    {
+      "path": "src/assets/fonts/ComingSoon-Regular.ttf",
+      "sha1": "4fe23a6ff943eefaaecc4e371e7299cad6c70443"
+    },
+    {
+      "path": "src/assets/fonts/Cousine-Regular.ttf",
+      "sha1": "9f1c2f309d1206e5350ec8ddbe0ff65ba8cb7143"
+    },
+    {
+      "path": "src/assets/fonts/CraftyGirls-Regular.ttf",
+      "sha1": "7dd617897f3c3e8103100c40c02eb20f2c6981fd"
+    },
+    {
+      "path": "src/assets/fonts/CreepsterCaps-Regular.ttf",
+      "sha1": "8ff0b010a3d3062803d51f165d2931b5f6a1b2fc"
+    },
+    {
+      "path": "src/assets/fonts/Crushed-Regular.ttf",
+      "sha1": "5555aae3c21eb43c6d8e78ca22d04a40c6e93984"
+    },
+    {
+      "path": "src/assets/fonts/FontdinerSwanky-Regular.ttf",
+      "sha1": "5922995108f8f1406c2890cb65aa3be42e4d5adb"
+    },
+    {
+      "path": "src/assets/fonts/HomemadeApple-Regular.ttf",
+      "sha1": "e3c1b7b24b7137a997e6b828bd24feda52c149ea"
+    },
+    {
+      "path": "src/assets/fonts/IrishGrover-Regular.ttf",
+      "sha1": "cf3440ead110bba8de6c54f73febc95a4d8e5885"
+    },
+    {
+      "path": "src/assets/fonts/JosefinSans-Bold.ttf",
+      "sha1": "dc9bf9dd3c3207275c97e8e66d37544867c15566"
+    },
+    {
+      "path": "src/assets/fonts/JosefinSans-Light.ttf",
+      "sha1": "869f678f03202d133387df8a2058d4d437b7c798"
+    },
+    {
+      "path": "src/assets/fonts/JosefinSans-Medium.ttf",
+      "sha1": "16e7e4b48d1c7fe6e1d66a49dd9bcedb5bbf0a82"
+    },
+    {
+      "path": "src/assets/fonts/JustAnotherHand-Regular.ttf",
+      "sha1": "6972c6c2ccacbe0f6a6cba0712ed0c93ceee7fd8"
+    },
+    {
+      "path": "src/assets/fonts/Kosugi-Regular.ttf",
+      "sha1": "fb02b5f57e8652a1fd499195d7070bafd58e16e2"
+    },
+    {
+      "path": "src/assets/fonts/KosugiMaru-Regular.ttf",
+      "sha1": "b592c8b10f4532b4b6f426d6a81eb860a4742ce5"
+    },
+    {
+      "path": "src/assets/fonts/Kranky-Regular.ttf",
+      "sha1": "63ba1ba9b380a6490b86f8ca012d479580d6da17"
+    },
+    {
+      "path": "src/assets/fonts/LuckiestGuy-Regular.ttf",
+      "sha1": "0bcd76d96499804fd3254c265dfe07f162e6c0ce"
+    },
+    {
+      "path": "src/assets/fonts/MaidenOrange-Regular.ttf",
+      "sha1": "cabdbcd03d74440ca28a6e65327158004b9c8959"
+    },
+    {
+      "path": "src/assets/fonts/Montez-Regular.ttf",
+      "sha1": "7ec9110af9b6fdca4e0f26810367ac191aaeddcd"
+    },
+    {
+      "path": "src/assets/fonts/MountainsofChristmas-Bold.ttf",
+      "sha1": "2847c514537a7059ebd0bb2d6b3c5eeb020a9a22"
+    },
+    {
+      "path": "src/assets/fonts/OpenSansHebrew-Regular.ttf",
+      "sha1": "e903a6ca81a56aea0a5dbd421df18f5c01ee8a5e"
+    },
+    {
+      "path": "src/assets/fonts/OpenSansHebrewCondensed-Italic.ttf",
+      "sha1": "39f0bcfa9015e773f7ac3c370cf00a6960e5ce19"
+    },
+    {
+      "path": "src/assets/fonts/PermanentMarker-Regular.ttf",
+      "sha1": "6d0bcddcb32c60bb9c75eacdffb5deef7913ebf2"
+    },
+    {
+      "path": "src/assets/fonts/Poppins-Regular.ttf",
+      "sha1": "fdd3002e7d814ee47c1c1b8487c72c6bbb3a2d00"
+    },
+    {
+      "path": "src/assets/fonts/Poppins-SemiBold.ttf",
+      "sha1": "8a4ace9392d06bcb7f8ea2f5169b07e4c383a90d"
+    },
+    {
+      "path": "src/assets/fonts/Poppins-SemiBoldItalic.ttf",
+      "sha1": "0c8bed0a5942b2388d36b11c115685d9f01700b0"
+    },
+    {
+      "path": "src/assets/fonts/Rancho-Regular.ttf",
+      "sha1": "59d91417f4b3b56fd52cd21cdd50c03e564dfde6"
+    },
+    {
+      "path": "src/assets/fonts/Redressed-Regular.ttf",
+      "sha1": "e55cd3484db90c1c403c2caa41a0e53a96f24932"
+    },
+    {
+      "path": "src/assets/fonts/RobotoMono[wght].ttf",
+      "sha1": "1f6afd30d77cb011d0747c81e0e62ff0b29b3fa7"
+    },
+    {
+      "path": "src/assets/fonts/RobotoSlab[wght].ttf",
+      "sha1": "40fe1568ce749e355bd2fc1e8dfd2d3f7bd45a27"
+    },
+    {
+      "path": "src/assets/fonts/Roboto[wdth,wght].ttf",
+      "sha1": "ced6cae5a264d33f78e710adaad7e3fef3053b8e"
+    },
+    {
+      "path": "src/assets/fonts/Rochester-Regular.ttf",
+      "sha1": "bf78ac9656a0f0b5b7ccc29bf681297e6ac4030f"
+    },
+    {
+      "path": "src/assets/fonts/RockSalt-Regular.ttf",
+      "sha1": "02f51454815443f9d30bcb71bb98d2ec88d64145"
+    },
+    {
+      "path": "src/assets/fonts/Satisfy-Regular.ttf",
+      "sha1": "353b423080a3e4b3c6e6311590dcc235c3db119d"
+    },
+    {
+      "path": "src/assets/fonts/Schoolbell-Regular.ttf",
+      "sha1": "edb2b1a43aa5403eb9436a116fea4da166d27c21"
+    },
+    {
+      "path": "src/assets/fonts/Slackey-Regular.ttf",
+      "sha1": "8bb2a975879769532b8c081366d51b7cf599d9b6"
+    },
+    {
+      "path": "src/assets/fonts/Smokum-Regular.ttf",
+      "sha1": "99c9734847094bf2eecdf76ebf60d4dfae0124ea"
+    },
+    {
+      "path": "src/assets/fonts/SpecialElite-Regular.ttf",
+      "sha1": "3aae0badce29869643e8a2e09e15056ba2b559d6"
+    },
+    {
+      "path": "src/assets/fonts/Sunset-Italic.ttf",
+      "sha1": "0d071fc56847650d35971c835b189a4996f3656e"
+    },
+    {
+      "path": "src/assets/fonts/Sunshiney-Regular.ttf",
+      "sha1": "04d7a4bc72864e9a8a22bd08d464a349db7765b6"
+    },
+    {
+      "path": "src/assets/fonts/Syncopate-Bold.ttf",
+      "sha1": "8e52aa625007afa35d25b49e0b5a87012bcac1a5"
+    },
+    {
+      "path": "src/assets/fonts/Ultra-Regular.ttf",
+      "sha1": "d5391bc11e4d12403683015fbfc30970aaf3451b"
+    },
+    {
+      "path": "src/assets/fonts/Unkempt-Regular.ttf",
+      "sha1": "194ddd7119f842ef1a9ddf219f7182158cb183f2"
+    },
+    {
+      "path": "src/assets/fonts/WalterTurncoat-Regular.ttf",
+      "sha1": "d33ce9d62c005eb87bb77624671f7f5829e96468"
+    },
+    {
+      "path": "src/assets/fonts/Yellowtail-Regular.ttf",
+      "sha1": "1f80f137d42945289056aa9f929e0b18fb49672d"
+    }
+  ]
+}
