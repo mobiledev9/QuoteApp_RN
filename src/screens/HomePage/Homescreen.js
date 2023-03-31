@@ -133,20 +133,29 @@ class Homescreen extends Component {
                 style={{
                   flexDirection: 'row',
                   alignItems: 'center',
-                  marginHorizontal: wp(2),
+                  marginLeft: wp(2),
+                  width: wp(45),
+                  bottom: hp(8),
+                  position: 'absolute',
                 }}>
                 <FastImage
                   source={Img.openQuote}
                   style={{
                     height: hp(2.5),
                     width: hp(2.5),
+                    alignSelf: 'flex-start',
                   }}
                   tintColor={CustomColors.black}
                 />
                 <Text
                   style={[
                     Onboardingstyles.mainquote,
-                    {fontSize: hp(2), alignSelf: 'center', marginTop: hp(2)},
+                    {
+                      fontSize: hp(2),
+                      alignSelf: 'center',
+                      marginTop: hp(2),
+                      fontFamily: 'JosefinSans-Medium',
+                    },
                   ]}>
                   {quoteOfday}
                 </Text>
@@ -155,6 +164,7 @@ class Homescreen extends Component {
                   style={{
                     height: hp(2.5),
                     width: hp(2.5),
+                    alignSelf: 'flex-end',
                   }}
                   tintColor={CustomColors.black}
                 />

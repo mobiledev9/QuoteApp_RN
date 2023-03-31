@@ -22,7 +22,7 @@ const ScreensData = [
   {
     logo: Img.logo1,
     quote: Strings.screen1text,
-    author: '- MARTHA BECK',
+    author: '- Martha Beck',
     bottomlogo: Img.bottomlogo,
     suggestion: `Get your quote of the day and brighten your mornings.`,
   },
@@ -46,7 +46,11 @@ const renderItem = ({item, index}) => {
     <View style={Onboardingstyles.sliderview}>
       <Image
         resizeMode={item.logo === Img.logo3 ? 'stretch' : 'contain'}
-        style={Onboardingstyles.mainlogo}
+        style={
+          index == 1
+            ? {...Onboardingstyles.mainlogo, top: hp(-3)}
+            : Onboardingstyles.mainlogo
+        }
         source={item.logo}
       />
       <View style={{marginTop: hp(52.5), alignItems: 'center'}}>
@@ -82,7 +86,11 @@ const renderItem = ({item, index}) => {
       <Text style={Onboardingstyles.suggestiontext}>{item.suggestion}</Text>
       <Image
         resizeMode="contain"
-        style={Onboardingstyles.bottomlogo}
+        style={
+          index == 1
+            ? Onboardingstyles.bottomlogo1
+            : Onboardingstyles.bottomlogo
+        }
         source={item.bottomlogo}
       />
     </View>

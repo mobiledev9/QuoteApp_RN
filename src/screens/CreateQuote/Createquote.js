@@ -118,6 +118,7 @@ class Createquote extends Component {
       isShadowModal: false,
       isSaveModal: false,
       isShare: false,
+      isBGModal: true,
 
       wallpapers: [],
     };
@@ -311,6 +312,7 @@ class Createquote extends Component {
       isSaveModal,
       isShare,
       isMore,
+      isBGModal,
     } = this.state;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: CustomColors.primarybg}}>
@@ -321,7 +323,7 @@ class Createquote extends Component {
             iconRightColor={
               isSaveModal ? CustomColors.bottomtabbg : CustomColors.black
             }
-            onSave={() => this.setState({isSaveModal: true})}
+            onSave={() => this.setState({isSaveModal: true, isQuoteBox: false})}
           />
 
           <ViewShot
@@ -485,7 +487,7 @@ class Createquote extends Component {
               )}
             </View>
           </ViewShot>
-          {isIndex == 0 && (
+          {/* {isIndex == 0 && (
             <View
               style={{
                 backgroundColor: CustomColors.white,
@@ -561,7 +563,7 @@ class Createquote extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-          )}
+          )} */}
           {isIndex == 2 && (
             <View
               style={{
@@ -652,18 +654,107 @@ class Createquote extends Component {
             <ScrollView
               showsHorizontalScrollIndicator={false}
               horizontal={true}>
-              <TabButton
-                onPress={() => {
-                  this.isOpenImagePicker();
-                  this.setState({
-                    isIndex: 0,
-                    showPop: true,
-                  });
-                }}
-                title="Background"
-                icon={isIndex == 0 ? Img.blackgallery : Img.gallery}
-                dotColor={isIndex == 0 ? CustomColors.black : 'transparent'}
-              />
+              <Tooltip
+                isVisible={isBGModal}
+                disableShadow
+                content={
+                  <View
+                    style={{
+                      backgroundColor: CustomColors.white,
+                      width: wp(90),
+                      alignSelf: 'center',
+                      borderRadius: 10,
+                      paddingHorizontal: hp(1.5),
+                      paddingVertical: hp(1),
+                      alignItems: 'center',
+                      flexDirection: 'row',
+                    }}>
+                    <View style={{flexDirection: 'row'}}>
+                      <TouchableOpacity
+                        onPress={() => {
+                          this.setState({
+                            isOpenColorSheet: true,
+                          });
+                        }}>
+                        <Image
+                          resizeMode="contain"
+                          source={Img.colorpicker}
+                          style={{
+                            height: hp(6),
+                            width: hp(6),
+                            marginRight: wp(2.5),
+                          }}
+                        />
+                      </TouchableOpacity>
+
+                      <View
+                        style={{
+                          borderRightWidth: 1,
+                          borderColor: CustomColors.bordercolor,
+                        }}
+                      />
+                      <FlatList
+                        data={wallpapers.slice(0, isMore)}
+                        keyExtractor={item => item.id}
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        renderItem={({item}) => (
+                          <Pressable
+                            onPress={() =>
+                              this.setState({
+                                bgImage: 'data:image/png;base64,' + item.data,
+                                gradiantBgImage: null,
+                                bgColor: null,
+                              })
+                            }>
+                            <FastImage
+                              style={{
+                                height: hp(6),
+                                width: hp(6),
+                                marginLeft: wp(2.5),
+                                borderRadius: 10,
+                              }}
+                              source={{
+                                uri: 'data:image/png;base64,' + item.data,
+                                priority: FastImage.priority.normal,
+                              }}
+                              resizeMode={FastImage.resizeMode.cover}
+                            />
+                          </Pressable>
+                        )}
+                      />
+                      <TouchableOpacity
+                        onPress={() => this.setState({isMore: isMore + 10})}>
+                        <FastImage
+                          source={Img.rightarrow}
+                          style={{
+                            height: hp(4),
+                            width: hp(4),
+                            marginVertical: hp(1),
+                          }}
+                        />
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                }
+                contentStyle={{borderRadius: 10}}
+                backgroundColor="transparent"
+                placement="top"
+                onClose={() => this.setState({isBGModal: false})}>
+                <TabButton
+                  onPress={() => {
+                    // this.isOpenImagePicker();
+                    this.setState({
+                      isBGModal: true,
+                      isIndex: 0,
+                      showPop: true,
+                    });
+                  }}
+                  title="Background"
+                  icon={isIndex == 0 ? Img.blackgallery : Img.gallery}
+                  dotColor={isIndex == 0 ? CustomColors.black : 'transparent'}
+                />
+              </Tooltip>
               <TabButton
                 onPress={() =>
                   this.setState({
@@ -839,6 +930,7 @@ class Createquote extends Component {
 
           <TextEditor
             isOpen={isIndex == 1}
+            isDelete={() => this.setState({quoteText: ''})}
             isClose={() => this.setState({isIndex: 0, quoteText: ''})}
             isDone={() => this.setState({isIndex: 0, isQuoteBox: true})}
             value={quoteText}

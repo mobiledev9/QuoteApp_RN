@@ -56,6 +56,11 @@ export const Onboardingstyles = StyleSheet.create({
     width: wp(20),
     bottom: wp(-20),
   },
+  bottomlogo1: {
+    position: 'absolute',
+    left: 0,
+    bottom: hp(0),
+  },
   paginationview: {
     flexDirection: 'row',
     alignItems: 'center',
