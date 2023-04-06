@@ -51,6 +51,7 @@ class Homescreen extends Component {
       copyQuote: '',
       quoteOfday: Strings.screen1text,
       quotes: [],
+      isShare: false,
     };
     this.viewRef = createRef();
   }
@@ -110,24 +111,27 @@ class Homescreen extends Component {
                   }}>
                   {Strings.quoteofday}
                 </Text>
-                <TouchableOpacity
-                  onPress={() =>
-                    this.viewRef.current.capture().then(uri => {
-                      RNFetchBlob.fs
-                        .readFile(uri, 'base64')
-                        .then(async data => {
-                          var base64Data = `data:image/png;base64,` + data;
-                          await Share.open({url: base64Data});
-                        })
-                        .catch(err => console.log(err));
-                    })
-                  }>
-                  <Image
-                    resizeMode="contain"
-                    source={Img.share}
-                    style={{height: hp(4), width: hp(4)}}
-                  />
-                </TouchableOpacity>
+                {!this.state.isShare && (
+                  <TouchableOpacity
+                    onPress={() => {
+                      this.setState({isShare: true});
+                      this.viewRef.current.capture().then(uri => {
+                        RNFetchBlob.fs
+                          .readFile(uri, 'base64')
+                          .then(async data => {
+                            var base64Data = `data:image/png;base64,` + data;
+                            await Share.open({url: base64Data});
+                          })
+                          .catch(err => console.log(err));
+                      });
+                    }}>
+                    <Image
+                      resizeMode="contain"
+                      source={Img.share}
+                      style={{height: hp(4), width: hp(4)}}
+                    />
+                  </TouchableOpacity>
+                )}
               </View>
               <View
                 style={{
@@ -138,15 +142,6 @@ class Homescreen extends Component {
                   bottom: hp(8),
                   position: 'absolute',
                 }}>
-                <FastImage
-                  source={Img.openQuote}
-                  style={{
-                    height: hp(2.5),
-                    width: hp(2.5),
-                    alignSelf: 'flex-start',
-                  }}
-                  tintColor={CustomColors.black}
-                />
                 <Text
                   style={[
                     Onboardingstyles.mainquote,
@@ -157,34 +152,43 @@ class Homescreen extends Component {
                       fontFamily: 'JosefinSans-Medium',
                     },
                   ]}>
-                  {quoteOfday}
+                  <FastImage
+                    source={Img.openQuote}
+                    style={{
+                      height: hp(2.5),
+                      width: hp(2.5),
+                    }}
+                    tintColor={CustomColors.black}
+                  />{' '}
+                  {quoteOfday}{' '}
+                  <FastImage
+                    source={Img.closeQuote}
+                    style={{
+                      height: hp(2.5),
+                      width: hp(2.5),
+                    }}
+                    tintColor={CustomColors.black}
+                  />
                 </Text>
-                <FastImage
-                  source={Img.closeQuote}
-                  style={{
-                    height: hp(2.5),
-                    width: hp(2.5),
-                    alignSelf: 'flex-end',
-                  }}
-                  tintColor={CustomColors.black}
-                />
               </View>
-              <TouchableOpacity
-                onPress={() => {
-                  Clipboard.setString(quoteOfday);
-                  showMessage({
-                    message: 'Copied',
-                    type: 'info',
-                    position: 'bottom',
-                  });
-                }}
-                style={{position: 'absolute', bottom: wp(5), right: wp(5)}}>
-                <Image
-                  resizeMode="contain"
-                  source={Img.copy}
-                  style={{height: hp(4), width: hp(4)}}
-                />
-              </TouchableOpacity>
+              {!this.state.isShare && (
+                <TouchableOpacity
+                  onPress={() => {
+                    Clipboard.setString(quoteOfday);
+                    showMessage({
+                      message: 'Copied',
+                      type: 'info',
+                      position: 'bottom',
+                    });
+                  }}
+                  style={{position: 'absolute', bottom: wp(5), right: wp(5)}}>
+                  <Image
+                    resizeMode="contain"
+                    source={Img.copy}
+                    style={{height: hp(4), width: hp(4)}}
+                  />
+                </TouchableOpacity>
+              )}
             </FastImage>
           </ViewShot>
           <ArrowHeader

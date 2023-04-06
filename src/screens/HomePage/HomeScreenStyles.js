@@ -42,7 +42,7 @@ export const HomeScreenStyles = StyleSheet.create({
   headerText: {
     alignSelf: 'center',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: hp(2.3),
+    fontSize: hp(2.2),
     color: CustomColors.black,
   },
 
@@ -51,7 +51,7 @@ export const HomeScreenStyles = StyleSheet.create({
   MainheaderText: {
     alignSelf: 'center',
     fontFamily: 'Poppins-SemiBold',
-    fontSize: hp(2.8),
+    fontSize: hp(2.2),
     color: CustomColors.black,
     marginTop: hp(2.5),
   },

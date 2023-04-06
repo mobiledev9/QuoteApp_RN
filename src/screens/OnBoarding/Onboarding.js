@@ -1,12 +1,13 @@
-//import liraries
 import React, {Component} from 'react';
 import {
   View,
   Text,
-  StyleSheet,
   Image,
   FlatList,
   TouchableOpacity,
+  LogBox,
+  SafeAreaView,
+  AppState,
 } from 'react-native';
 import FastImage from 'react-native-fast-image';
 import {CustomColors} from '../../theme/CustomColors';
@@ -45,11 +46,13 @@ const renderItem = ({item, index}) => {
   return (
     <View style={Onboardingstyles.sliderview}>
       <Image
-        resizeMode={item.logo === Img.logo3 ? 'stretch' : 'contain'}
+        resizeMode={'contain'}
         style={
-          index == 1
-            ? {...Onboardingstyles.mainlogo, top: hp(-3)}
-            : Onboardingstyles.mainlogo
+          index == 0
+            ? Onboardingstyles.mainlogo1
+            : index == 1
+            ? Onboardingstyles.mainlogo2
+            : Onboardingstyles.mainlogo3
         }
         source={item.logo}
       />
@@ -58,27 +61,27 @@ const renderItem = ({item, index}) => {
           style={{
             flexDirection: 'row',
             marginHorizontal: wp(8),
+            marginTop: index == 0 ? hp(5) : 0,
           }}>
-          <FastImage
-            source={Img.openQuote}
-            style={{
-              height: hp(3),
-              width: hp(3),
-              marginBottom: hp(2),
-            }}
-            tintColor={CustomColors.black}
-          />
-          <Text style={Onboardingstyles.mainquote}>{item.quote}</Text>
-          <FastImage
-            source={Img.closeQuote}
-            style={{
-              height: hp(3),
-              width: hp(3),
-              alignSelf: 'flex-end',
-              // marginBottom: hp(1),
-            }}
-            tintColor={CustomColors.black}
-          />
+          <Text style={Onboardingstyles.mainquote}>
+            <FastImage
+              source={Img.openQuote}
+              style={{
+                height: hp(3),
+                width: hp(3),
+              }}
+              tintColor={CustomColors.black}
+            />{' '}
+            {item.quote}{' '}
+            <FastImage
+              source={Img.closeQuote}
+              style={{
+                height: hp(3),
+                width: hp(3),
+              }}
+              tintColor={CustomColors.black}
+            />
+          </Text>
         </View>
 
         <Text style={Onboardingstyles.authortext}>{item.author}</Text>
@@ -103,6 +106,9 @@ class OnBoarding extends Component {
     this.state = {
       isIndex: 0,
     };
+  }
+  componentDidMount() {
+    LogBox.ignoreAllLogs();
   }
 
   render() {

@@ -6199,6 +6199,11 @@ react-native-sqlite-storage@^6.0.1:
   resolved "https://registry.npmjs.org/react-native-sqlite-storage/-/react-native-sqlite-storage-6.0.1.tgz"
   integrity sha512-1tDFjrint6X6qSYKf3gDyz+XB+X79jfiL6xTugKHPRtF0WvqMtVgdLuNqZunIXjNEvNtNVEbXaeZ6MsguFu00A==
 
+react-native-system-navigation-bar@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-system-navigation-bar/-/react-native-system-navigation-bar-2.5.0.tgz#7140f42e4465f4ed96d388f13af68dc63d4dd218"
+  integrity sha512-2ogNiPwSd4lvv/tASmLbgdXVHuoH0jwvOEM2G+k1ufgI+BHTUNbwS6Hh0stxI5bsfYxYj52KVdKzPwQke+pAug==
+
 react-native-tab-view@^3.3.4:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-3.5.1.tgz#2ad454afc0e186b43ea8b89053f39180d480d48b"
