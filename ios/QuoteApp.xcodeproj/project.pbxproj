@@ -10,7 +10,6 @@
 		00E356F31AD99517003FC87E /* QuoteAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* QuoteAppTests.m */; };
 		04BB7AFCF72741DDB11F7315 /* MaidenOrange-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16C44E7D370E4A20863DCC03 /* MaidenOrange-Regular.ttf */; };
 		088663F5E88C4E2296E0ED4D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E2F877B5234449C3B3E34A88 /* Poppins-Regular.ttf */; };
-		0C80B921A6F3F58F76C31292 /* libPods-QuoteApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-QuoteApp.a */; };
 		1364D8EDDFF046C4A1E42178 /* Slackey-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 920045A072BE486B94A06706 /* Slackey-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -25,6 +24,7 @@
 		4D2093098E31426B80CE2F02 /* KosugiMaru-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDD577CA43014796B58A3CA1 /* KosugiMaru-Regular.ttf */; };
 		549828D5F6154B72B23B1F15 /* Aclonica-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16A9B9FDF68845D1A461E8A2 /* Aclonica-Regular.ttf */; };
 		589C82C357F4426E87EB16BC /* Chewy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0403FAEA0AFC4C169E74771D /* Chewy-Regular.ttf */; };
+		598DF8FFFF0CBAFD43E9FD8A /* libPods-QuoteApp-QuoteAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20A543BA94C3AD4B35EEC9AA /* libPods-QuoteApp-QuoteAppTests.a */; };
 		59AB406D5C8049F389F51A08 /* Rancho-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1620C002728A491F9CC6FC19 /* Rancho-Regular.ttf */; };
 		682D4FA3DD074C0F87A38882 /* Rochester-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 416A0885EB5A482BA97544FF /* Rochester-Regular.ttf */; };
 		6C165EBABBEE474F8AAE216E /* SpecialElite-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A155A5CC01524D2E83EA2E60 /* SpecialElite-Regular.ttf */; };
@@ -32,9 +32,9 @@
 		72C1372C6B2B4B08831EF5F0 /* RobotoMono[wght].ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D3E29A461C4487ABC9BEE14 /* RobotoMono[wght].ttf */; };
 		7417E3F7A6F94DDE8753C558 /* Sunset-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 772DC328FDF84FEAA5E9180E /* Sunset-Italic.ttf */; };
 		7661AC5B92B14A02904A8D45 /* CreepsterCaps-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC57ADC97C1B426AB619CD19 /* CreepsterCaps-Regular.ttf */; };
-		7699B88040F8A987B510C191 /* libPods-QuoteApp-QuoteAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-QuoteApp-QuoteAppTests.a */; };
 		772AD019C95A4B089B919CC8 /* JosefinSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8D58DE877A345CF8CD993B9 /* JosefinSans-Bold.ttf */; };
 		7985F9AEE5514D4290B12B4E /* FontdinerSwanky-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B224FC570A294A66A5277B14 /* FontdinerSwanky-Regular.ttf */; };
+		7A6586B59271810D03F8B281 /* libPods-QuoteApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E20A0181AF2BB789E39F66 /* libPods-QuoteApp.a */; };
 		7BA5F134D88249ECAD04D315 /* Arimo[wght].ttf in Resources */ = {isa = PBXBuildFile; fileRef = 037F6C7AA92B486B8FB79AF0 /* Arimo[wght].ttf */; };
 		7CBA6146017B44A49355B8EC /* Roboto[wdth,wght].ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FDF28D7339948AA947DDD1F /* Roboto[wdth,wght].ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -91,36 +91,36 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = QuoteApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = QuoteApp/main.m; sourceTree = "<group>"; };
 		141ACD1829BF1A9D001BEC73 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../android/app/src/main/assets/www; sourceTree = "<group>"; };
+		14B1170829ECF74B001A6C7F /* hermes.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = hermes.xcframework; path = "Pods/hermes-engine/destroot/Library/Frameworks/universal/hermes.xcframework"; sourceTree = "<group>"; };
 		1620C002728A491F9CC6FC19 /* Rancho-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rancho-Regular.ttf"; path = "../src/assets/fonts/Rancho-Regular.ttf"; sourceTree = "<group>"; };
 		16A9B9FDF68845D1A461E8A2 /* Aclonica-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Aclonica-Regular.ttf"; path = "../src/assets/fonts/Aclonica-Regular.ttf"; sourceTree = "<group>"; };
 		16C44E7D370E4A20863DCC03 /* MaidenOrange-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MaidenOrange-Regular.ttf"; path = "../src/assets/fonts/MaidenOrange-Regular.ttf"; sourceTree = "<group>"; };
 		19F250BCC04943BDA4382D2B /* Unkempt-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Unkempt-Regular.ttf"; path = "../src/assets/fonts/Unkempt-Regular.ttf"; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-QuoteApp-QuoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuoteApp-QuoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A28E8930CB64381BD438D7F /* Schoolbell-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Schoolbell-Regular.ttf"; path = "../src/assets/fonts/Schoolbell-Regular.ttf"; sourceTree = "<group>"; };
 		1CA8B48E791848508AA233EA /* MountainsofChristmas-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "MountainsofChristmas-Bold.ttf"; path = "../src/assets/fonts/MountainsofChristmas-Bold.ttf"; sourceTree = "<group>"; };
 		1D30FA9512214A7CBCE9B5A3 /* JosefinSans-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Light.ttf"; path = "../src/assets/fonts/JosefinSans-Light.ttf"; sourceTree = "<group>"; };
 		1F16C78F96334DB997EC7973 /* Cousine-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Cousine-Regular.ttf"; path = "../src/assets/fonts/Cousine-Regular.ttf"; sourceTree = "<group>"; };
+		20A543BA94C3AD4B35EEC9AA /* libPods-QuoteApp-QuoteAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuoteApp-QuoteAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3542E0DB831E48A2BFC5A96A /* JustAnotherHand-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "JustAnotherHand-Regular.ttf"; path = "../src/assets/fonts/JustAnotherHand-Regular.ttf"; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-QuoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp.debug.xcconfig"; path = "Target Support Files/Pods-QuoteApp/Pods-QuoteApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3B568F8D67294BA79E60719D /* OpenSansHebrewCondensed-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSansHebrewCondensed-Italic.ttf"; path = "../src/assets/fonts/OpenSansHebrewCondensed-Italic.ttf"; sourceTree = "<group>"; };
 		416A0885EB5A482BA97544FF /* Rochester-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rochester-Regular.ttf"; path = "../src/assets/fonts/Rochester-Regular.ttf"; sourceTree = "<group>"; };
+		41E20A0181AF2BB789E39F66 /* libPods-QuoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		438C543D71E8409199FD4E23 /* OpenSansHebrew-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSansHebrew-Regular.ttf"; path = "../src/assets/fonts/OpenSansHebrew-Regular.ttf"; sourceTree = "<group>"; };
 		4BDCD3B775A74B1EA6EDEBC2 /* ComingSoon-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ComingSoon-Regular.ttf"; path = "../src/assets/fonts/ComingSoon-Regular.ttf"; sourceTree = "<group>"; };
 		52BF2E6D235A401CB929C8A4 /* Sunshiney-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sunshiney-Regular.ttf"; path = "../src/assets/fonts/Sunshiney-Regular.ttf"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-QuoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp.release.xcconfig"; path = "Target Support Files/Pods-QuoteApp/Pods-QuoteApp.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-QuoteApp-QuoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp-QuoteAppTests.debug.xcconfig"; path = "Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5CA1CB98985743518D2C8932 /* Smokum-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Smokum-Regular.ttf"; path = "../src/assets/fonts/Smokum-Regular.ttf"; sourceTree = "<group>"; };
 		5D3E29A461C4487ABC9BEE14 /* RobotoMono[wght].ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RobotoMono[wght].ttf"; path = "../src/assets/fonts/RobotoMono[wght].ttf"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-QuoteApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuoteApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		619C9A833D504E0FB8818BC5 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		692F0B56B1184FE082E5B897 /* WalterTurncoat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "WalterTurncoat-Regular.ttf"; path = "../src/assets/fonts/WalterTurncoat-Regular.ttf"; sourceTree = "<group>"; };
-		772DC328FDF84FEAA5E9180E /* Sunset-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Sunset-Italic.ttf"; path = "../src/assets/fonts/Sunset-Italic.ttf"; sourceTree = "<group>"; };
+		6D6B88D547182D7F0A64F163 /* Pods-QuoteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp.release.xcconfig"; path = "Target Support Files/Pods-QuoteApp/Pods-QuoteApp.release.xcconfig"; sourceTree = "<group>"; };
+		772DC328FDF84FEAA5E9180E /* Sunset-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Sunset-Italic.ttf"; path = "../src/assets/fonts/Sunset-Italic.ttf"; sourceTree = "<group>"; };
 		7B0DFF957040423B96723F6E /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "PermanentMarker-Regular.ttf"; path = "../src/assets/fonts/PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		7C69747696D9429BBFB422F0 /* CraftyGirls-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CraftyGirls-Regular.ttf"; path = "../src/assets/fonts/CraftyGirls-Regular.ttf"; sourceTree = "<group>"; };
 		808FC2DB33514817945C3589 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../src/assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QuoteApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		827F8C7FB7CEFEC50BC46CBD /* Pods-QuoteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp.debug.xcconfig"; path = "Target Support Files/Pods-QuoteApp/Pods-QuoteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		83A71CE4B78C0E95D45CF5D4 /* Pods-QuoteApp-QuoteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp-QuoteAppTests.debug.xcconfig"; path = "Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		85154C1E8B8D47AD824107C3 /* Ultra-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Ultra-Regular.ttf"; path = "../src/assets/fonts/Ultra-Regular.ttf"; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-QuoteApp-QuoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp-QuoteAppTests.release.xcconfig"; path = "Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A382412867C4FD5B666192D /* Kosugi-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Kosugi-Regular.ttf"; path = "../src/assets/fonts/Kosugi-Regular.ttf"; sourceTree = "<group>"; };
 		920045A072BE486B94A06706 /* Slackey-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Slackey-Regular.ttf"; path = "../src/assets/fonts/Slackey-Regular.ttf"; sourceTree = "<group>"; };
 		943F48BFEE2B454A9F3B4AB2 /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "LuckiestGuy-Regular.ttf"; path = "../src/assets/fonts/LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
@@ -136,6 +136,7 @@
 		C8D58DE877A345CF8CD993B9 /* JosefinSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "JosefinSans-Bold.ttf"; path = "../src/assets/fonts/JosefinSans-Bold.ttf"; sourceTree = "<group>"; };
 		CBD5A67A94204F6FA55F5150 /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Satisfy-Regular.ttf"; path = "../src/assets/fonts/Satisfy-Regular.ttf"; sourceTree = "<group>"; };
 		CDD577CA43014796B58A3CA1 /* KosugiMaru-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "KosugiMaru-Regular.ttf"; path = "../src/assets/fonts/KosugiMaru-Regular.ttf"; sourceTree = "<group>"; };
+		D2350E31D7331FC8AA028EF3 /* Pods-QuoteApp-QuoteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuoteApp-QuoteAppTests.release.xcconfig"; path = "Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E2F877B5234449C3B3E34A88 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		E9151C3AB22E43A9ACB9FB07 /* RockSalt-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "RockSalt-Regular.ttf"; path = "../src/assets/fonts/RockSalt-Regular.ttf"; sourceTree = "<group>"; };
 		E98740652B9144C78DAA6344 /* HomemadeApple-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "HomemadeApple-Regular.ttf"; path = "../src/assets/fonts/HomemadeApple-Regular.ttf"; sourceTree = "<group>"; };
@@ -151,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-QuoteApp-QuoteAppTests.a in Frameworks */,
+				598DF8FFFF0CBAFD43E9FD8A /* libPods-QuoteApp-QuoteAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-QuoteApp.a in Frameworks */,
+				7A6586B59271810D03F8B281 /* libPods-QuoteApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +201,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14B1170829ECF74B001A6C7F /* hermes.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-QuoteApp.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-QuoteApp-QuoteAppTests.a */,
+				41E20A0181AF2BB789E39F66 /* libPods-QuoteApp.a */,
+				20A543BA94C3AD4B35EEC9AA /* libPods-QuoteApp-QuoteAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,10 +300,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-QuoteApp.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-QuoteApp.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-QuoteApp-QuoteAppTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-QuoteApp-QuoteAppTests.release.xcconfig */,
+				827F8C7FB7CEFEC50BC46CBD /* Pods-QuoteApp.debug.xcconfig */,
+				6D6B88D547182D7F0A64F163 /* Pods-QuoteApp.release.xcconfig */,
+				83A71CE4B78C0E95D45CF5D4 /* Pods-QuoteApp-QuoteAppTests.debug.xcconfig */,
+				D2350E31D7331FC8AA028EF3 /* Pods-QuoteApp-QuoteAppTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -313,12 +315,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "QuoteAppTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				A3C1FCDF5B9E08CCA1DE776A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				9DD481A377F2EA06A4BDBE99 /* [CP] Embed Pods Frameworks */,
+				0AD81753E8363C86C1E2CBDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,14 +336,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "QuoteApp" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				FD2604740C769148F2F5F274 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				1D62F04F9A563A5B2402AD71 /* [CP] Embed Pods Frameworks */,
+				13637DD13A837193EFACCA2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,7 +476,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
+		0AD81753E8363C86C1E2CBDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13637DD13A837193EFACCA2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D62F04F9A563A5B2402AD71 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -491,7 +527,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		9DD481A377F2EA06A4BDBE99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3C1FCDF5B9E08CCA1DE776A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -513,7 +566,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		FD10A7F022414F080027D42C /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2604740C769148F2F5F274 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -533,76 +605,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp/Pods-QuoteApp-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QuoteApp-QuoteAppTests/Pods-QuoteApp-QuoteAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FD10A7F022414F080027D42C /* Start Packager */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Start Packager";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -638,7 +640,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-QuoteApp-QuoteAppTests.debug.xcconfig */;
+			baseConfigurationReference = 83A71CE4B78C0E95D45CF5D4 /* Pods-QuoteApp-QuoteAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -665,7 +667,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-QuoteApp-QuoteAppTests.release.xcconfig */;
+			baseConfigurationReference = D2350E31D7331FC8AA028EF3 /* Pods-QuoteApp-QuoteAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -689,7 +691,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-QuoteApp.debug.xcconfig */;
+			baseConfigurationReference = 827F8C7FB7CEFEC50BC46CBD /* Pods-QuoteApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -716,7 +718,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-QuoteApp.release.xcconfig */;
+			baseConfigurationReference = 6D6B88D547182D7F0A64F163 /* Pods-QuoteApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

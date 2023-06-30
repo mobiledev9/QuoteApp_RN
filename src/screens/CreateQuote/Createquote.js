@@ -15,6 +15,8 @@ import {
   TouchableNativeFeedback,
   LogBox,
   PermissionsAndroid,
+  StyleSheet,
+  Dimensions,
 } from 'react-native';
 import Popover from 'react-native-popover-view';
 import FastImage from 'react-native-fast-image';
@@ -27,6 +29,9 @@ import ViewShot from 'react-native-view-shot';
 import tinycolor from 'tinycolor2';
 import Share from 'react-native-share';
 import ImagePicker from 'react-native-image-crop-picker';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {DragTextEditor, DragTextRef} from 'react-native-drag-text-editor';
+import {useAnimatedStyle, useSharedValue} from 'react-native-reanimated';
 import {openDatabase} from 'react-native-sqlite-storage';
 import {CameraRoll} from '@react-native-camera-roll/camera-roll';
 import {
@@ -59,7 +64,9 @@ import EffectModal from '../../components/EffectModal/EffectModal';
 import ShadowModal from '../../components/ShadowModal/ShadowModal';
 import StoreModal from '../../components/StoreModal/StoreModal';
 import TabButton from '../../components/TabButton/TabButton';
+import DragTectEditot from '../../components/DragTextEditor/DragTectEditot';
 
+const WINDOW = Dimensions.get('window');
 var db = openDatabase({
   name: 'example.db',
   createFromLocation: 1,
@@ -125,6 +132,7 @@ class Createquote extends Component {
 
     this.viewRef = createRef();
     this.saveRef = createRef();
+    this.DragTextEditorRef = createRef();
   }
 
   componentDidMount() {
@@ -288,6 +296,23 @@ class Createquote extends Component {
     });
   };
 
+  IconButton = ({icon, onPress, onLongPress}) => (
+    <TouchableOpacity
+      style={{flex: 1, alignItems: 'center'}}
+      onPress={onPress}
+      onLongPress={onLongPress}>
+      <Image
+        resizeMode="contain"
+        source={icon}
+        style={{height: hp(3), width: hp(3)}}
+      />
+    </TouchableOpacity>
+  );
+
+  manageActiveStatus = () => {
+    console.log('_index');
+  };
+
   render() {
     const {
       isIndex,
@@ -313,6 +338,7 @@ class Createquote extends Component {
       isShare,
       isMore,
       isBGModal,
+      DragTextEditorRef,
     } = this.state;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: CustomColors.primarybg}}>
@@ -379,7 +405,72 @@ class Createquote extends Component {
                         alignItems: 'center',
                         justifyContent: 'center',
                       }}>
-                      {quoteText && (
+                      {(isIndex == 1 || quoteText) && (
+                        <GestureHandlerRootView
+                          style={{...StyleSheet.absoluteFillObject}}>
+                          <Animated.View
+                            style={{
+                              transform: [{rotate: `${this.state.deg}deg`}],
+                            }}>
+                            <DragTextEditor
+                              placeholder="Quote"
+                              value={quoteText}
+                              onChangeText={e => this.setState({quoteText: e})}
+                              onItemActive={() => this.manageActiveStatus()}
+                              visible={true}
+                              resizerSnapPoints={['left', 'right']}
+                              cornerComponents={[
+                                {
+                                  side: 'TR',
+                                  customCornerComponent: () => (
+                                    <this.IconButton
+                                      icon={Img.cancel}
+                                      onPress={() =>
+                                        this.setState({
+                                          isIndex: 0,
+                                          quoteText: '',
+                                        })
+                                      }
+                                    />
+                                  ),
+                                },
+                              ]}
+                              rotationComponent={{
+                                side: 'top',
+                                customRotationComponent: () => (
+                                  <this.IconButton
+                                    icon={Img.undo}
+                                    onPress={() =>
+                                      this.setState({deg: this.state.deg + 90})
+                                    }
+                                  />
+                                ),
+                              }}
+                              externalTextStyles={{
+                                color: quoteTextColor,
+                                textAlignVertical: 'center',
+                                marginHorizontal: wp(2),
+                                fontSize: quoteSize,
+                                textAlign: quoteAlign,
+                                letterSpacing: quoteLetterSpace,
+                                lineHeight: quoteLineSpace,
+                                fontFamily: quoteFontFamily,
+                                textShadowColor: quoteShadowColor,
+                                textShadowRadius: quoteShadowRadius,
+                                textShadowOffset: {
+                                  height: -quoteShadowOffsetHeight,
+                                  width: quoteShadowOffsetWidth,
+                                },
+                              }}
+                              externalBorderStyles={{
+                                borderStyle: 'solid',
+                                borderColor: 'gray',
+                              }}
+                            />
+                          </Animated.View>
+                        </GestureHandlerRootView>
+                      )}
+                      {/* {quoteText && (
                         <View
                           style={{
                             alignItems: 'center',
@@ -480,14 +571,14 @@ class Createquote extends Component {
                             </View>
                           </Animated.View>
                         </View>
-                      )}
+                      )} */}
                     </ImageBackground>
                   </ColorMatrix>
                 </TouchableNativeFeedback>
               )}
             </View>
           </ViewShot>
-          {/* {isIndex == 0 && (
+          {isIndex == 0 && (
             <View
               style={{
                 backgroundColor: CustomColors.white,
@@ -563,7 +654,7 @@ class Createquote extends Component {
                 </TouchableOpacity>
               </View>
             </View>
-          )} */}
+          )}
           {isIndex == 2 && (
             <View
               style={{
@@ -654,112 +745,23 @@ class Createquote extends Component {
             <ScrollView
               showsHorizontalScrollIndicator={false}
               horizontal={true}>
-              <Tooltip
-                isVisible={isBGModal}
-                disableShadow
-                content={
-                  <View
-                    style={{
-                      backgroundColor: CustomColors.white,
-                      width: wp(90),
-                      alignSelf: 'center',
-                      borderRadius: 10,
-                      paddingHorizontal: hp(1.5),
-                      paddingVertical: hp(1),
-                      alignItems: 'center',
-                      flexDirection: 'row',
-                    }}>
-                    <View style={{flexDirection: 'row'}}>
-                      <TouchableOpacity
-                        onPress={() => {
-                          this.setState({
-                            isOpenColorSheet: true,
-                          });
-                        }}>
-                        <Image
-                          resizeMode="contain"
-                          source={Img.colorpicker}
-                          style={{
-                            height: hp(6),
-                            width: hp(6),
-                            marginRight: wp(2.5),
-                          }}
-                        />
-                      </TouchableOpacity>
-
-                      <View
-                        style={{
-                          borderRightWidth: 1,
-                          borderColor: CustomColors.bordercolor,
-                        }}
-                      />
-                      <FlatList
-                        data={wallpapers.slice(0, isMore)}
-                        keyExtractor={item => item.id}
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        renderItem={({item}) => (
-                          <Pressable
-                            onPress={() =>
-                              this.setState({
-                                bgImage: 'data:image/png;base64,' + item.data,
-                                gradiantBgImage: null,
-                                bgColor: null,
-                              })
-                            }>
-                            <FastImage
-                              style={{
-                                height: hp(6),
-                                width: hp(6),
-                                marginLeft: wp(2.5),
-                                borderRadius: 10,
-                              }}
-                              source={{
-                                uri: 'data:image/png;base64,' + item.data,
-                                priority: FastImage.priority.normal,
-                              }}
-                              resizeMode={FastImage.resizeMode.cover}
-                            />
-                          </Pressable>
-                        )}
-                      />
-                      <TouchableOpacity
-                        onPress={() => this.setState({isMore: isMore + 10})}>
-                        <FastImage
-                          source={Img.rightarrow}
-                          style={{
-                            height: hp(4),
-                            width: hp(4),
-                            marginVertical: hp(1),
-                          }}
-                        />
-                      </TouchableOpacity>
-                    </View>
-                  </View>
-                }
-                contentStyle={{borderRadius: 10}}
-                backgroundColor="transparent"
-                placement="top"
-                onClose={() => this.setState({isBGModal: false})}>
-                <TabButton
-                  onPress={() => {
-                    // this.isOpenImagePicker();
-                    this.setState({
-                      isBGModal: true,
-                      isIndex: 0,
-                      showPop: true,
-                    });
-                  }}
-                  title="Background"
-                  icon={isIndex == 0 ? Img.blackgallery : Img.gallery}
-                  dotColor={isIndex == 0 ? CustomColors.black : 'transparent'}
-                />
-              </Tooltip>
+              <TabButton
+                onPress={() => {
+                  // this.isOpenImagePicker();
+                  this.setState({
+                    isBGModal: true,
+                    isIndex: 0,
+                    // showPop: true,
+                  });
+                }}
+                title="Background"
+                icon={isIndex == 0 ? Img.blackgallery : Img.gallery}
+                dotColor={isIndex == 0 ? CustomColors.black : 'transparent'}
+              />
               <TabButton
                 onPress={() =>
                   this.setState({
                     isIndex: 1,
-                    showPop: true,
                   })
                 }
                 title="Text"
@@ -770,7 +772,6 @@ class Createquote extends Component {
                 onPress={() =>
                   this.setState({
                     isIndex: 2,
-                    showPop: true,
                   })
                 }
                 title="Property"
@@ -928,14 +929,14 @@ class Createquote extends Component {
             }
           />
 
-          <TextEditor
+          {/* <TextEditor
             isOpen={isIndex == 1}
             isDelete={() => this.setState({quoteText: ''})}
             isClose={() => this.setState({isIndex: 0, quoteText: ''})}
             isDone={() => this.setState({isIndex: 0, isQuoteBox: true})}
             value={quoteText}
             onChangeText={text => this.setState({quoteText: text})}
-          />
+          /> */}
 
           <Popover
             from={this.saveRef}

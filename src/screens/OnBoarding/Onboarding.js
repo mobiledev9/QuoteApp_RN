@@ -6,9 +6,8 @@ import {
   FlatList,
   TouchableOpacity,
   LogBox,
-  SafeAreaView,
-  AppState,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import FastImage from 'react-native-fast-image';
 import {CustomColors} from '../../theme/CustomColors';
 import {Img} from '../../theme/Img';
@@ -149,7 +148,8 @@ class OnBoarding extends Component {
 
         {this.state.isIndex === 2 ? (
           <TouchableOpacity
-            onPress={() => {
+            onPress={async () => {
+              await AsyncStorage.setItem('isOpen', 'true');
               this.props.navigation.navigate('Homescreen');
             }}
             style={Onboardingstyles.bottomfilledbutton}>

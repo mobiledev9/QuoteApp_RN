@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {StatusBar, View} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Onboarding from '../screens/OnBoarding/Onboarding';
 import Homescreen from '../screens/HomePage/Homescreen';
 import Createquote from '../screens/CreateQuote/Createquote';
@@ -35,6 +36,16 @@ const screens = [
 ];
 
 class Route extends Component {
+  state = {
+    isOpen: 'false',
+  };
+
+  async componentDidMount() {
+    let status = await AsyncStorage.getItem('isOpen');
+    console.log(isOpen, '========');
+    this.setState({isOpen: status ? status : 'false'});
+  }
+
   render() {
     return (
       <View style={{flex: 1, backgroundColor: CustomColors.primarybg}}>
@@ -46,6 +57,9 @@ class Route extends Component {
         />
         <NavigationContainer>
           <Stack.Navigator
+            initialRouteName={
+              this.state.isOpen == 'true' ? 'Homescreen' : 'Onboarding'
+            }
             screenOptions={{
               headerShown: false,
             }}>
